@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGESH & MENAKHA — Wedding Invitation</title>
+  <meta name="description" content="You're invited to celebrate the union of Logesh & Menakha. Join us for a beautiful wedding celebration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <!-- Left Bird (Dove) -->
+      <div class="bird bird-left" id="birdLeft">
+        <svg viewBox="0 0 120 100" class="bird-svg">
+          <!-- Body -->
+          <ellipse cx="55" cy="58" rx="25" ry="14" fill="var(--gold-shimmer)"/>
+          <!-- Head -->
+          <circle cx="80" cy="48" r="10" fill="var(--gold-shimmer)"/>
+          <!-- Beak -->
+          <polygon points="90,47 97,49 90,51" fill="#B8923B"/>
+          <!-- Eye -->
+          <circle cx="83" cy="46" r="2" fill="var(--burgundy-deep)"/>
+          <!-- Upper Wing -->
+          <path d="M50 55 Q35 20 15 10 Q25 25 30 40 Q35 48 50 55 Z" fill="var(--gold-light)" class="wing-upper">
+            <animateTransform attributeName="transform" type="rotate" values="0 50 55;-20 50 55;0 50 55" dur="0.4s" repeatCount="indefinite"/>
+          </path>
+          <!-- Lower Wing -->
+          <path d="M50 58 Q30 35 10 25 Q20 38 28 48 Q35 55 50 58 Z" fill="#E8D5A3" opacity="0.7">
+            <animateTransform attributeName="transform" type="rotate" values="0 50 58;-15 50 58;0 50 58" dur="0.4s" repeatCount="indefinite"/>
+          </path>
+          <!-- Tail -->
+          <path d="M30 58 Q15 55 5 45 Q12 55 8 65 Q18 58 30 62 Z" fill="var(--gold-light)"/>
+        </svg>
+        <div class="bird-heart">❤</div>
+      </div>
+      <!-- Right Bird (Dove - mirrored) -->
+      <div class="bird bird-right" id="birdRight">
+        <svg viewBox="0 0 120 100" class="bird-svg">
+          <!-- Body -->
+          <ellipse cx="65" cy="58" rx="25" ry="14" fill="var(--gold-shimmer)"/>
+          <!-- Head -->
+          <circle cx="40" cy="48" r="10" fill="var(--gold-shimmer)"/>
+          <!-- Beak -->
+          <polygon points="30,47 23,49 30,51" fill="#B8923B"/>
+          <!-- Eye -->
+          <circle cx="37" cy="46" r="2" fill="var(--burgundy-deep)"/>
+          <!-- Upper Wing -->
+          <path d="M70 55 Q85 20 105 10 Q95 25 90 40 Q85 48 70 55 Z" fill="var(--gold-light)">
+            <animateTransform attributeName="transform" type="rotate" values="0 70 55;20 70 55;0 70 55" dur="0.4s" repeatCount="indefinite"/>
+          </path>
+          <!-- Lower Wing -->
+          <path d="M70 58 Q90 35 110 25 Q100 38 92 48 Q85 55 70 58 Z" fill="#E8D5A3" opacity="0.7">
+            <animateTransform attributeName="transform" type="rotate" values="0 70 58;15 70 58;0 70 58" dur="0.4s" repeatCount="indefinite"/>
+          </path>
+          <!-- Tail -->
+          <path d="M90 58 Q105 55 115 45 Q108 55 112 65 Q102 58 90 62 Z" fill="var(--gold-light)"/>
+        </svg>
+        <div class="bird-heart">❤</div>
+      </div>
+      <!-- Center Heart (appears when birds meet) -->
+      <div class="center-heart" id="centerHeart">
+        <span class="big-heart">❤</span>
+        <div class="heart-burst" id="heartBurst"></div>
+      </div>
+      <p class="preloader-text" id="preloaderText">Logesh & Menakha</p>
+    </div>
+  </div>
+
+
+
+  <!-- FLOATING PETALS -->
+  <div class="petals-container" id="petalsContainer"></div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <p class="hero-pre-title reveal">காமாச்சி அம்மன் துணை</p>
+      <h1 class="hero-title">
+        <span class="name-first reveal">Logesh</span>
+        <span class="ampersand reveal">&</span>
+        <span class="name-second reveal">Menakha
+        </span>
+      </h1>
+      <div class="hero-divider reveal">
+        <span class="line"></span>
+        <span class="diamond">◆</span>
+        <span class="line"></span>
+      </div>
+      
+      <div class="hero-date reveal">
+        <span>Sunday</span>
+        <span class="date-big">22</span>
+        <span>March 2026</span>
+      </div>
+
+      <div class="countdown reveal" id="countdown">
+        <div class="countdown-item">
+          <span class="countdown-number" id="days">000</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="hours">00</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="minutes">00</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="seconds">00</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+
+      <button class="btn-invitation reveal" id="openInvitation" onclick="openInvitation()">
+        <span>Open Invitation</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+      </button>
+    </div>
+
+  </section>
+
+
+  <!-- ============ COUPLE ============ -->
+  <section class="couple" id="couple">
+    <div class="section-header reveal">
+      <span class="section-subtitle">The Happy Couple</span>
+      <h2 class="section-title">Two Souls, One Heart</h2>
+      <div class="section-divider">
+        <span class="line"></span>
+        <span class="heart">❤</span>
+        <span class="line"></span>
+      </div>
+    </div>
+
+    <div class="couple-container">
+      <div class="couple-card reveal-left">
+        <div class="couple-img-wrapper">
+          <div class="couple-img-frame">
+            <img src="images/groom.jpeg" alt="Logesh - The Groom" loading="lazy">
+          </div>
+          <div class="couple-ring groom-ring">💍</div>
+        </div>
+        <h3 class="couple-name">Logesh</h3>
+        <p class="couple-role">The Groom</p>
+        <p class="couple-desc">Son of Mr.Rathinam & Mrs.Pushpam <br>A soul full of grace and love</p>
+      </div>
+
+      <div class="couple-heart-center reveal">
+        <div class="beating-heart">❤</div>
+      </div>
+
+      <div class="couple-card reveal-right">
+        <div class="couple-img-wrapper">
+          <div class="couple-img-frame">
+            <img src="images/bride.jpeg" alt="Menakha  - The Groom" loading="lazy">
+          </div>
+          <div class="couple-ring groom-ring">💍</div>
+        </div>
+        <h3 class="couple-name">Menakha</h3>
+        <p class="couple-role">The Bride</p>
+        <p class="couple-desc">Son of Mr. Pandidurai & Mrs.Latha<br>A heart devoted and true</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ LOVE STORY QUOTE ============ -->
+  <section class="quote-section">
+    <div class="quote-bg-overlay"></div>
+    <div class="quote-content reveal">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">Every love story is beautiful, but ours is my favorite.</p>
+      <span class="quote-author">— Love, Logesh & Menakha</span>
+    </div>
+  </section>
+
+
+
+
+  <!-- ============ VENUE ============ -->
+  <section class="venue" id="venue">
+    <div class="section-header reveal">
+      <span class="section-subtitle">Find Us Here</span>
+      <h2 class="section-title">Wedding Venue</h2>
+      <div class="section-divider">
+        <span class="line"></span>
+        <span class="heart">📍</span>
+        <span class="line"></span>
+      </div>
+    </div>
+
+    <div class="venue-content reveal">
+      <div class="venue-info">
+        <div class="venue-icon">🏛️</div>
+        <h3>A1 Mahal</h3>
+        <p> Madurai - Rameswaram Hwy, Vani <br>Ramanathapuram, Tamil Nadu 623536</p>
+        <a href="https://maps.app.goo.gl/nr46CNr6HpkTEsQM7" target="_blank" class="btn-directions">
+          <span>Get Directions</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="venue-map">
+        <a href="https://maps.app.goo.gl/yADbSwxWXoQSiAm8A" target="_blank" class="venue-map-link">
+          <img src="images/location.png" alt="A1 Mahal - Wedding Venue Location" loading="lazy">
+          <div class="venue-map-overlay">
+            <span>📍 Tap to View on Google Maps</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-names">Logesh & Menakha</p>
+      <p class="footer-date">12 · 07 · 2026</p>
+      <div class="footer-divider">
+        <span class="line"></span>
+        <span class="heart">❤</span>
+        <span class="line"></span>
+      </div>
+      <p class="footer-message">Made with love for our special day</p>
+    </div>
+  </footer>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
