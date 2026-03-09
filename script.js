@@ -99,10 +99,13 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => revealObserver.observe(el));
 
+// ============ MOBILE DETECTION ============
+const isMobile = window.innerWidth <= 768;
+
 // ============ HERO PARTICLES ============
 function createParticles() {
   const container = document.getElementById('heroParticles');
-  const count = 40;
+  const count = isMobile ? 15 : 40;
 
   for (let i = 0; i < count; i++) {
     const particle = document.createElement('div');
@@ -120,6 +123,7 @@ createParticles();
 
 // ============ FLOATING PETALS ============
 const petalEmojis = ['🌸', '🪻', '💮', '✿', '❀', '🌺'];
+const petalInterval = isMobile ? 3000 : 1500;
 
 function createPetal() {
   const container = document.getElementById('petalsContainer');
@@ -134,17 +138,19 @@ function createPetal() {
   setTimeout(() => petal.remove(), 12000);
 }
 
-setInterval(createPetal, 1500);
+setInterval(createPetal, petalInterval);
 
 // ============ PARALLAX EFFECT ON HERO ============
-window.addEventListener('scroll', () => {
-  const scrolled = window.pageYOffset;
-  const hero = document.querySelector('.hero-content');
-  if (hero && scrolled < window.innerHeight) {
-    hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-    hero.style.opacity = 1 - (scrolled / window.innerHeight) * 0.6;
-  }
-});
+if (!isMobile) {
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero-content');
+    if (hero && scrolled < window.innerHeight) {
+      hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+      hero.style.opacity = 1 - (scrolled / window.innerHeight) * 0.6;
+    }
+  });
+}
 
 // ============ SMOOTH NAVBAR BEHAVIOR ============
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

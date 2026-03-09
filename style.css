@@ -1272,39 +1272,156 @@ img {
 }
 
 /* ============ RESPONSIVE ============ */
+
+/* --- Tablet (768px) --- */
 @media (max-width: 768px) {
-  .name-first, .name-second { font-size: 3.5rem; }
-  .ampersand { font-size: 2rem; }
+  /* Hero */
+  .name-first, .name-second { font-size: 3.2rem; }
+  .ampersand { font-size: 1.8rem; }
   .hero-date .date-big { font-size: 3rem; }
-  .countdown { gap: 10px; }
-  .countdown-number { font-size: 1.6rem; padding: 8px 12px; min-width: 50px; }
-  .section-title { font-size: 2.2rem; }
-  .section-subtitle { font-size: 1.5rem; }
+  .hero-pre-title { font-size: 1rem; }
+  .hero-content { padding: 15px; }
 
-  .timeline-line { left: 20px; }
-  .timeline-item, .timeline-item:nth-child(odd) {
-    padding-left: 55px;
-    padding-right: 0;
-    justify-content: flex-start;
-  }
-  .timeline-dot { left: 20px; }
+  /* Countdown */
+  .countdown { gap: 12px; }
+  .countdown-number { font-size: 1.5rem; padding: 8px 12px; min-width: 50px; }
+  .countdown-label { font-size: 0.75rem; letter-spacing: 1px; }
 
-  .gallery-grid { grid-template-columns: 1fr; max-width: 400px; }
-  .gallery-item { aspect-ratio: 4/3; }
+  /* Sections */
+  .section-title { font-size: 2rem; }
+  .section-subtitle { font-size: 1.4rem; }
+  .couple { padding: 70px 15px; }
+  .quote-section { padding: 80px 15px; }
+  .venue { padding: 70px 15px; }
 
-  .venue-content { flex-direction: column; }
-  .form-row { flex-direction: column; }
-
-  .couple-container { flex-direction: column; gap: 30px; }
+  /* Couple - stack vertically */
+  .couple-container { flex-direction: column; gap: 25px; }
+  .couple-card { min-width: unset; max-width: 100%; }
+  .couple-img-frame { width: 190px; height: 190px; }
   .couple-heart-center { order: 0; }
+  .couple-name { font-size: 2.2rem; }
+
+  /* Venue */
+  .venue-content { flex-direction: column; }
+  .venue-map { min-width: unset; width: 100%; }
+  .venue-map img { height: 280px; }
+  .venue-info { min-width: unset; }
+
+  /* Quote */
+  .quote-text { font-size: 1.6rem; }
+  .quote-mark { font-size: 4rem; }
+  .quote-author { font-size: 1.3rem; }
+
+  /* Button */
+  .btn-invitation { padding: 14px 30px; font-size: 1rem; }
+
+  /* Footer */
+  .footer-names { font-size: 2rem; }
+  .footer-date { font-size: 1rem; }
+
+  /* Reduce floating petals for performance */
+  .petals-container { opacity: 0.6; }
 }
 
+/* --- Mobile (480px) --- */
 @media (max-width: 480px) {
-  .name-first, .name-second { font-size: 2.8rem; }
-  .hero-pre-title { font-size: 0.9rem; letter-spacing: 3px; }
-  .hero-tagline { font-size: 1rem; }
-  .countdown-number { font-size: 1.3rem; padding: 6px 10px; }
-  .countdown-label { font-size: 0.7rem; }
-  .event-card { padding: 20px; }
-  .couple-img-frame { width: 180px; height: 180px; }
+  /* Hero */
+  .name-first, .name-second { font-size: 2.6rem; }
+  .ampersand { font-size: 1.5rem; margin: -3px 0; }
+  .hero-pre-title { font-size: 0.85rem; letter-spacing: 1px; }
+  .hero-date .date-big { font-size: 2.5rem; }
+  .hero-date { gap: 12px; font-size: 0.9rem; letter-spacing: 2px; }
+  .hero-content { padding: 10px; }
+
+  /* Countdown */
+  .countdown { gap: 8px; }
+  .countdown-number { font-size: 1.2rem; padding: 6px 10px; min-width: 45px; border-radius: 8px; }
+  .countdown-label { font-size: 0.65rem; letter-spacing: 1px; }
+
+  /* Sections */
+  .section-title { font-size: 1.7rem; letter-spacing: 1px; }
+  .section-subtitle { font-size: 1.2rem; }
+  .section-header { margin-bottom: 35px; }
+  .couple { padding: 50px 12px; }
+  .quote-section { padding: 60px 12px; }
+  .venue { padding: 50px 12px; }
+
+  /* Couple */
+  .couple-img-frame { width: 160px; height: 160px; border-width: 3px; }
+  .couple-img-frame { box-shadow: 0 0 0 5px rgba(201, 168, 76, 0.1), var(--shadow-gold); }
+  .couple-name { font-size: 2rem; }
+  .couple-role { font-size: 0.85rem; letter-spacing: 3px; }
+  .couple-desc { font-size: 0.9rem; }
+  .couple-ring { font-size: 1.2rem; }
+  .beating-heart { font-size: 1.5rem; }
+
+  /* Quote */
+  .quote-text { font-size: 1.3rem; line-height: 1.7; }
+  .quote-mark { font-size: 3rem; }
+  .quote-author { font-size: 1.1rem; }
+
+  /* Venue */
+  .venue-info h3 { font-size: 1.6rem; }
+  .venue-info p { font-size: 1rem; }
+  .venue-map img { height: 220px; }
+  .venue-map { border-width: 2px; border-radius: 12px; }
+  .btn-directions { padding: 10px 22px; font-size: 0.9rem; }
+
+  /* Button */
+  .btn-invitation { padding: 12px 25px; font-size: 0.95rem; letter-spacing: 1px; }
+
+  /* Dividers */
+  .hero-divider .line, .section-divider .line, .footer-divider .line { width: 50px; }
+
+  /* Footer */
+  .footer { padding: 40px 15px; }
+  .footer-names { font-size: 1.8rem; }
+  .footer-date { font-size: 0.9rem; letter-spacing: 3px; }
+  .footer-message { font-size: 0.85rem; }
+
+  /* Performance: reduce petals and particles */
+  .petals-container { opacity: 0.4; }
+  .hero-particles { opacity: 0.5; }
+}
+
+/* --- Small Mobile (360px) --- */
+@media (max-width: 360px) {
+  .name-first, .name-second { font-size: 2.2rem; }
+  .ampersand { font-size: 1.2rem; }
+  .hero-date .date-big { font-size: 2rem; }
+  .hero-date { gap: 8px; font-size: 0.8rem; }
+  .countdown { gap: 6px; flex-wrap: wrap; justify-content: center; }
+  .countdown-number { font-size: 1.1rem; padding: 5px 8px; min-width: 40px; }
+  .section-title { font-size: 1.5rem; }
+  .couple-img-frame { width: 140px; height: 140px; }
+  .couple-name { font-size: 1.8rem; }
+  .venue-map img { height: 180px; }
+  .quote-text { font-size: 1.1rem; }
+  .btn-invitation { padding: 10px 20px; font-size: 0.85rem; }
+}
+
+/* --- Smooth Scroll & Touch Fix --- */
+@media (hover: none) and (pointer: coarse) {
+  /* Disable hover effects on touch devices */
+  .couple-img-frame:hover { transform: none; }
+  .couple-img-frame:hover img { transform: none; }
+  .venue-map-link:hover img { transform: none; }
+  .venue-map-link:hover .venue-map-overlay { opacity: 1; }
+  .venue-map-overlay { opacity: 0.8; }
+
+  /* Fix parallax on mobile (causes jank) */
+  .hero { background-attachment: scroll; }
+  .quote-section { background-attachment: scroll; }
+
+  /* Smoother transitions */
+  .reveal, .reveal-left, .reveal-right {
+    transition-duration: 0.7s;
+  }
+}
+
+/* --- Safe area for notched phones --- */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .footer {
+    padding-bottom: calc(40px + env(safe-area-inset-bottom));
+  }
 }
